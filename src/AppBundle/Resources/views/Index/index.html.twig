@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+{% trans_default_domain 'AppBundle' %}
+{% block body %}
+    {% spaceless %}
+    <div class="preloader">
+        <div class="preloader__status">
+            <img src="{{ asset('bundles/app/images/preloader.gif') }}" height="64" width="64" alt="">
+        </div>
+    </div>
+
+    <section class="intro">
+
+
+        <div class="main row">
+            {{ locale_switcher() }}
+            {{ contact('AppBundle:Social:social') }}
+
+            <div class="twelve columns">
+
+                <h1 class="text-header">{{ 'main.header'|trans }}</h1>
+
+                <p class="text-description">{{ 'main.desc'|trans }}</p>
+
+                <h5 class="text-counter">{{ 'main.counter'|trans }}</h5>
+
+                    {% set counter %}
+                    <span class="main__counter_days main__counter_time">%D <em class="main__counter_text">{{ 'days'|trans }}</em></span>
+                    <span class="main__counter_time">%H <em class="main__counter_text">{{ 'hours'|trans }}</em></span>
+                    <span class="main__counter_time">%M <em class="main__counter_text">{{ 'minutes'|trans }}</em></span>
+                    <span class="main__counter_time">%S <em class="main__counter_text">{{ 'seconds'|trans }}</em></span>
+                    {% endset %}
+                <div class="main__counter u-cf" data-counter="{{ counter|e }}" data-end_date="{{ end_date|date('Y/m/d H:i:s') }}">
+                    {{ counter|replace({'%D':0,'%H':0,'%M':0,'%S':0})|raw }}
+                </div>
+
+                <!-- Begin MailChimp Signup Form -->
+                <div class="main__form__subsribe">
+                    {{ render(controller('FDevsContactUsBundle:Default:index')) }}
+                </div>
+
+            </div>
+
+        </div>
+        <!-- main end -->
+    </section>
+{% endspaceless %}
+{% endblock %}

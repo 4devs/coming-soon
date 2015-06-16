@@ -1,0 +1,6 @@
+placeholder:
+    email: 'Your Email *'
+required.message:
+    email: 'Please enter your email address.'
+form:
+    success: 'Your email is saved.'

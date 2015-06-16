@@ -1,0 +1,24 @@
+{% extends 'fdevs_contact.html.twig' %}
+{% block github_connect %}
+{% spaceless %}
+    <li class="connect connect_github">
+        <a href="{{ connect.link }}" title="{{ connect.text }}">
+            <i class="fa fa-{{ connect.type }}"></i></a>
+    </li>
+{% endspaceless %}
+{% endblock github_connect %}
+
+{% block fdevs_contact %}
+{% spaceless %}
+    <div class="organization" itemscope itemtype="http://schema.org/Organization">
+        {{- block('fdevs_organization_name') -}}
+        {{ address(contact.address,options.prefix,options.locale) }}
+        <ul class="list-inline social-buttons">
+            {% for oneConnect in contact.connectList %}
+                {{ connect(oneConnect,options.prefix) }}
+            {% endfor %}
+        </ul>
+    </div>
+{% endspaceless %}
+{% endblock fdevs_contact %}
+

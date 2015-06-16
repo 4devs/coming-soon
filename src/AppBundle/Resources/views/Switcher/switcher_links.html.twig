@@ -1,0 +1,23 @@
+{#
+<ul class="locale-chooser">
+    {% for locale in locales %}
+        <li class="locale-chooser_element{% if current_locale == locale.locale %} locale_current{% endif %}">
+            <a href="{{ locale.link }}" title="{{ locale.locale_current_language }}">{{ locale.locale_current_language }}</a>
+        </li>
+    {% endfor %}
+</ul>
+#}
+<div class="locale-chooser">
+    {% for locale in locales if current_locale == locale.locale %}
+        <span class="locale-chooser__current" title="{{ locale.locale_current_language }}">{{ locale.locale_current_language }}</span>
+    {% endfor %}
+    <ul class="locale-chooser__List">
+        {#{{ current_locale }}#}
+        {% for locale in locales if current_locale != locale.locale %}
+            <li class="locale-chooser__select">
+                <a href="{{ locale.link }}"
+                   title="{{ locale.locale_current_language }}">{{ locale.locale_current_language }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

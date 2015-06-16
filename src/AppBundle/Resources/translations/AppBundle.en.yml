@@ -1,0 +1,13 @@
+form:
+    subscribe: "Subscribe"
+    success: 'Your email is saved.'
+
+title: "Comming Soon"
+main:
+    header: "A simple countdown system"
+    desc: "It has responsive design and a progress bar based on admin input or time left to start. Users can subscribe to notifications and you can contact them manually or in an automated way when your site is ready; you just need to configure your server properly."
+    counter: "Time left before launching"
+days: 'days'
+hours: 'hours'
+minutes: 'minutes'
+seconds: 'seconds'

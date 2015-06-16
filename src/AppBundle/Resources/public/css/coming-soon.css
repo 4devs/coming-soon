@@ -1,0 +1,220 @@
+.row {
+    max-width: 1008px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #6d6e69;
+}
+
+.intro {
+    position: relative;
+    min-height: 750px;
+    width: 100%;
+    background: #161415 url(../images/header-background.jpg) no-repeat center center;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+}
+
+.main {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.text-danger {
+    color: red;
+}
+.success-subscribe{
+    color: white;
+}
+.subscribe-form,
+.text-danger,
+.success-subscribe {
+    margin: auto;
+}
+
+.text-danger ul li {
+    list-style: none;
+}
+
+.text-header {
+    font: 42px/1.2em 'montserrat-bold', sans-serif;
+    color: #fff;
+    margin-bottom: 18px;
+    padding: 0 10%;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.text-description {
+    font: 16px/33px 'montserrat-regular', sans-serif;
+    color: #fff;
+    margin-bottom: 18px;
+    padding: 0 18%;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .7);
+}
+
+.text-counter {
+    font: 13px/24px 'montserrat-bold', sans-serif;
+    color: #1F782F;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .7);
+}
+
+/* counter */
+.main__counter {
+    width: 75%;
+    color: #fff;
+    text-align: center;
+    margin: 18px auto 0;
+}
+
+.main__counter_time {
+    font: 70px/1em 'merriweather-bold', serif;
+    display: block;
+    padding: 12px 0 30px;
+    min-width: 24%;
+    float: left;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+    border-left: 1px dotted rgba(255, 255, 255, .2);
+}
+
+.main__counter_days {
+    border-left: none;
+}
+
+.main__counter_text {
+    font: 11px/18px 'montserrat-regular', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 12px;
+    display: block;
+    color: #BCBCBC;
+    color: rgba(255, 255, 255, .6);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .7);
+}
+
+/* mailchimp form */
+.main__form__subsribe {
+    clear: both;
+    margin: 48px auto 18px;
+    width: 50%;
+}
+
+.main__form__subsribe:before,
+.main__form__subsribe:after {
+    content: " ";
+    display: table;
+}
+
+.main__form__subsribe:after {
+    clear: both;
+}
+
+.main__form__subsribe input {
+    border: none;
+    display: inline-block;
+    float: left;
+}
+
+.main__form__subsribe input[type="email"],
+.main__form__subsribe input[type="submit"] {
+    color: #B3B7BC;
+}
+
+.main__form__subsribe input[type="email"]:focus {
+    border: none;
+}
+
+.main__form__subsribe input[type="email"] {
+    font-size: 15px;
+    height: 54px;
+    line-height: 30px;
+    padding: 12px 15px;
+    border-radius: 3px 0 0 3px;
+    background: #727272;
+    background: rgba(255, 255, 255, .2);
+    width: 60%;
+}
+
+.main__form__subsribe input[type="submit"] {
+    font-size: 15px;
+    line-height: 30px;
+    height: 54px;
+    padding: 12px 30px;
+    margin: 0 0 18px 0;
+    border-radius: 0 3px 3px 0;
+    background: #197C28;
+    background: rgba(25, 124, 40, 1);
+    width: 40%;
+}
+
+.main__form__subsribe input[type="submit"]:hover {
+    background: #146320;
+}
+
+/* social links */
+.main .alert-success {
+    color: white;
+}
+
+.main .alert-success strong {
+    font-size: 22px;
+}
+
+.organization {
+    text-align: right;
+}
+
+.list-inline {
+    display: inline;
+}
+
+.social-buttons {
+    clear: both;
+    font-size: 22px;
+    padding: 0;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+}
+
+.social-buttons .connect {
+    display: inline-block;
+    margin: 0 12px;
+    padding: 0;
+}
+
+.main .social .connect a {
+    color: #fff;
+}
+
+.social-buttons .connect a:hover {
+    color: #197C28;
+}
+
+.locale-chooser {
+    position: relative;
+    float: left;
+}
+
+.locale-chooser__current {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: #1EAEDB;
+    font-size: 14px;
+    line-height: 34px;
+    /*overflow: hidden;*/
+}
+
+.locale-chooser__List {
+    position: absolute;
+    top: 30px;
+}
+
+.locale-chooser__select {
+    list-style: none;
+    cursor: pointer;
+    display: none;
+    /*opacity: 0;*/
+    /*filter: alpha(opacity=0);*/
+}

@@ -1,0 +1,6 @@
+placeholder:
+    email: 'Ваш Email *'
+required.message:
+    email: 'Необходимо ввести адрес.'
+form:
+    success: 'Ваш адрес электронной почты сохранен.'

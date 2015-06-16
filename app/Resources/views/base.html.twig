@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}{{ 'title'|trans({},'AppBundle') }}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        {% block stylesheets %}
+            {% stylesheets
+            'bundles/app/css/font-awesome/css/font-awesome.min.css'
+            'bundles/app/css/fonts.css'
+            'bundles/app/css/preloader.css'
+            'bundles/app/css/normalize.css'
+            'bundles/app/css/skeleton.css'
+            'bundles/app/css/coming-soon.css'
+            'bundles/app/css/media-queries.css'
+                filter='cssrewrite' output='css/style.css' %}
+            <link rel="stylesheet" href="{{ asset_url }}"/>
+            {% endstylesheets %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            {% javascripts
+            'bundles/app/js/jquery-1.10.2.min.js'
+            'bundles/app/js/jquery.countdown.js'
+            'bundles/app/js/jquery.placeholder.js'
+            'bundles/app/js/backstretch.js'
+            'bundles/fdevscontactus/js/jqBootstrapValidation.js'
+            'bundles/app/js/contact_me.js'
+            'bundles/app/js/init.js'
+            output='js/script.js' %}
+            <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock %}
+    </body>
+</html>

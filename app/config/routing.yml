@@ -1,0 +1,12 @@
+app:
+    resource: "@AppBundle/Controller/IndexController.php"
+    type:     annotation
+
+f_devs_contact_us:
+    resource: "@FDevsContactUsBundle/Resources/config/routing.xml"
+    prefix:   /{_locale}/
+    defaults:
+        _locale: en
+    requirements:
+        _locale: '\w{2}'
+

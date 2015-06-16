@@ -1,0 +1,13 @@
+{{ form_start(form,{'attr':{'novalidate':'novalidate','class':'subscribe-form'}}) }}
+<div class="form-group control-group">
+    {{ form_widget(form.email,{'attr':{'class':'form-control','data-validation-required-message':'required.message.email'|trans({},'FDevsContactUsBundle'),'data-validation-email-message':'f_devs_contact_us.email.invalid'|trans({},'validators')} }) }}
+
+    <div class="clear"><input id="{{ form.vars.id }}" type="submit"
+                              value="{{ 'form.subscribe'|trans({},'AppBundle') }}" name="subscribe"
+                              class="button"></div>
+    <p class="help-block text-danger">{{ form_errors(form.email) }}</p>
+
+    <p class="success-subscribe">{{ form_errors(form) }}</p>
+</div>
+
+{{ form_end(form) }}

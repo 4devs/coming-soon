@@ -1,0 +1,6 @@
+placeholder:
+    email: 'Ваш Email *'
+required.message:
+    email: 'Введiть Ваш email.'
+form:
+    success: 'Ваша адреса електронної пошти збережена.'
